@@ -73,22 +73,24 @@ function lightStars(e) {
       // span# stars img.
       var stars = document.querySelectorAll("span#stars");
 
-      // c. Loop through the stars collection with an index ranging from 0 up to less than the value of the starNumber variable.Light every star in the collection by changing the src attribute of the star image to the bw_star2.png image file.
-      for (var i = 0; i < array.length; i++) {
-
+      // c. Loop through the stars collection with an index ranging from 0 up to less than the value of the starNumber variable. Light every star in the collection by changing the src attribute of the star image to the bw_star2.png image file.
+      for (var i = 0; i < starNumber; i++) {
+            starNumber[i].src = "bw_star2.png";
       }
 
       // d. After the for loop, create another loop that loops through the stars collection with the index ranging from the value of the starNumber variable to less than 5. Unlight every star in this col - lection by changing the src attribute of the star image to the bw_star.png image file.
-
+      for (var i = 0; i < 5; i++) {
+            starNumber[i].src = "bw_star.png";
+      }
 
       // e. Change the value of the input box with the id attribute“ rating” to starNumber stars, where starNumber is the value of the starNumber variable.
-
+      document.getElementById("rating").value = starNumber + "stars";
 
       // f. When the mouse pointer moves off a star image, the lit stars should be unlit.Add an event listener to the target of the event object that runs the turnOffStars() function in response to the mouseleave event.
+      e.target.addEventListener = turnOffStars();
 
-
-      // g. If the user clicks the star image, the selected rating should be set, which means moving the mouse pointer off the star should not remove the rating.Add an event listener for the target of the event object that runs an anonymous function removing the turnOffStars() function from the mouseleave event.
-
+      // g. If the user clicks the star image, the selected rating should be set, which means moving the mouse pointer off the star should not remove the rating. Add an event listener for the target of the event object that runs an anonymous function removing the turnOffStars() function from the mouseleave event.
+      document.addEventListener
 
 }
 
